@@ -1,0 +1,549 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100d10">
+  <meta name="description" content="Portfólio de JohnMcArt — desenvolvimento web, sistemas, acessibilidade digital e design.">
+  <meta property="og:title" content="JohnMcArt — Developer & Digital Creator">
+  <meta property="og:description" content="Projetos, habilidades e experiências em desenvolvimento web e tecnologia.">
+  <title>JohnMcArt — Portfólio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-pt="Pular para o conteúdo" data-en="Skip to content">Pular para o conteúdo</a>
+
+  <header class="navbar">
+    <a class="logo" href="#home" aria-label="JohnMcArt — início">JM<span>.</span></a>
+
+    <nav class="nav-links" id="navigation" aria-label="Navegação principal">
+      <a href="#projects" data-pt="Projetos" data-en="Projects">Projetos</a>
+      <a href="#skills" data-pt="Habilidades" data-en="Skills">Habilidades</a>
+      <a href="#about" data-pt="Sobre" data-en="About">Sobre</a>
+      <a href="#education" data-pt="Formação" data-en="Education">Formação</a>
+      <a href="#contact" data-pt="Contato" data-en="Contact">Contato</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="language-button" id="language-toggle" type="button" aria-label="Switch language">EN</button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navigation">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">
+          <span class="status-dot"></span>
+          <span data-pt="PORTFÓLIO · 2026" data-en="PORTFOLIO · 2026">PORTFÓLIO · 2026</span>
+        </p>
+
+        <p class="hero-kicker" data-pt="DESENVOLVIMENTO WEB & CRIATIVIDADE DIGITAL" data-en="WEB DEVELOPMENT & DIGITAL CREATIVITY">
+          DESENVOLVIMENTO WEB & CRIATIVIDADE DIGITAL
+        </p>
+
+        <h1>John<span class="accent">Mc</span>Art<span class="period">.</span></h1>
+
+        <h2 class="hero-subtitle"
+            data-pt="Eu crio enquanto falo!"
+            data-en="I create as I speak!">
+    
+        </h2>
+
+        <p class="hero-description"
+           data-pt="Sou estudante de Informática para Internet, com foco em desenvolvimento front-end e experiência prática em projetos web, sistemas e acessibilidade digital. Gosto de unir funcionalidade, organização e cuidado visual."
+           data-en="I'm an Internet Computing student focused on front-end development, with practical experience in web projects, systems and digital accessibility. I enjoy combining functionality, structure and thoughtful visual design.">
+          Sou estudante de Informática para Internet, com foco em desenvolvimento front-end e experiência prática em projetos web, sistemas e acessibilidade digital. Gosto de unir funcionalidade, organização e cuidado visual.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects" data-pt="Explorar projetos" data-en="Explore projects">
+            Explorar projetos <span aria-hidden="true">↘</span>
+          </a>
+          <a class="button button-secondary" href="#contact" data-pt="Entrar em contato" data-en="Get in touch">
+            Entrar em contato <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span>HTML · CSS · JavaScript</span>
+          <span class="meta-separator"></span>
+          <span>Python · Django · SQL</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Identidade visual do portfólio">
+        <div class="visual-glow"></div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+
+        <div class="visual-card">
+          <span class="visual-card-label"> identidade</span>
+
+          <svg class="visual-symbol" viewBox="0 0 240 240" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="symbol-gradient" x1="25" y1="25" x2="215" y2="215" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#DDA9FF"/>
+                <stop offset="0.55" stop-color="#B34BE1"/>
+                <stop offset="1" stop-color="#E52D4C"/>
+              </linearGradient>
+            </defs>
+            <path d="M120 20L141 82L203 48L169 110L220 120L169 132L203 192L141 158L120 220L99 158L37 192L71 132L20 120L71 108L37 48L99 82L120 20Z"
+              stroke="url(#symbol-gradient)" stroke-width="2.5" stroke-linejoin="round"/>
+            <circle cx="120" cy="120" r="43" stroke="url(#symbol-gradient)" stroke-width="2"/>
+            <circle cx="120" cy="120" r="8" fill="#F4E8FA"/>
+            <path d="M120 77V112M163 120H128M120 163V128M77 120H112" stroke="#F4E8FA" stroke-width="2"/>
+          </svg>
+
+          <span class="visual-card-caption">CODIGO / DESIGN / CRIATIVIDADE</span>
+        </div>
+
+        <div class="floating-note note-code">
+          <span class="note-icon">&lt;/&gt;</span>
+          <span><strong>EU FALO</strong><small>enquanto crio</small></span>
+        </div>
+
+        <div class="floating-note note-design">
+          <span class="note-icon">✳</span>
+          <span><strong>NOSSAS EXPECTATIVAS</strong><small> moldam a nossa realidade 
+</small></span>
+        </div>
+
+        <span class="visual-index">01 — INTRODUCTION</span>
+      </div>
+
+      <div class="hero-footer">
+        <span data-pt="DESENVOLVIMENTO × DESIGN" data-en="DEVELOPMENT × DESIGN">DESENVOLVIMENTO × DESIGN</span>
+        <a href="#projects" data-pt="ROLE PARA EXPLORAR ↓" data-en="SCROLL TO EXPLORE ↓">ROLE PARA EXPLORAR ↓</a>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 — SELECTED WORK</p>
+          <h2 data-pt="Projetos<span class='accent'>.</span>" data-en="Projects<span class='accent'>.</span>">
+            Projetos<span class="accent">.</span>
+          </h2>
+        </div>
+        <p data-pt="Projetos acadêmicos e pessoais em que transformo ideias em soluções digitais."
+           data-en="Academic and personal projects where I turn ideas into digital solutions.">
+          Projetos acadêmicos e pessoais em que transformo ideias em soluções digitais.
+        </p>
+      </div>
+
+      <div class="project-filters" role="group" aria-label="Filtrar projetos">
+        <button class="filter-button active" data-filter="all" aria-pressed="true" data-pt="Todos" data-en="All">Todos</button>
+        <button class="filter-button" data-filter="web" aria-pressed="false" data-pt="Desenvolvimento web" data-en="Web development">Desenvolvimento web</button>
+        <button class="filter-button" data-filter="education" aria-pressed="false" data-pt="Educação" data-en="Education">Educação</button>
+        <button class="filter-button" data-filter="technology" aria-pressed="false" data-pt="Tecnologia" data-en="Technology">Tecnologia</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card project-featured reveal" data-category="web">
+          <a class="project-cover cover-sega" href="https://github.com/geovana4lves/Projeto-final-psw" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório SEGA">
+            <span class="cover-index">PROJECT 01 / SYSTEMS</span>
+            <div class="cover-sega-content">
+              <span class="cover-logo">SEGA<span>.</span></span>
+              <span class="cover-subtitle">ACADEMIC MANAGEMENT</span>
+              <div class="mini-dashboard">
+                <span></span><span></span><span></span>
+                <div></div><div></div><div></div>
+              </div>
+            </div>
+            <span class="cover-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-title-row">
+              <h3>SEGA — Gestão Acadêmica</h3>
+              <span class="project-number">01</span>
+            </div>
+            <p data-pt="Sistema acadêmico voltado à organização de informações de estudantes, professores, cursos, turmas, avaliações e notas."
+               data-en="An academic system designed to organize student, teacher, course, class, assessment and grade information.">
+              Sistema acadêmico voltado à organização de informações de estudantes, professores, cursos, turmas, avaliações e notas.
+            </p>
+            <div class="tag-list"><span>Python</span><span>Django</span><span>MySQL</span><span>UML</span></div>
+            <a class="project-link" href="https://github.com/geovana4lves/Projeto-final-psw" target="_blank" rel="noopener noreferrer">
+              <span data-pt="Ver repositório" data-en="View repository">Ver repositório</span> <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="web">
+          <a class="project-cover cover-paginario" href="https://github.com/JohnMcArt/sitema-paginario" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório Paginário">
+            <span class="cover-index">PROJECT 02 / WEB</span>
+            <div class="book-stack" aria-hidden="true">
+              <div class="book book-one"></div><div class="book book-two"></div><div class="book book-three"></div>
+            </div>
+            <div class="cover-paginario-title">paginário<span>.</span></div>
+            <span class="cover-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-title-row"><h3>Paginário</h3><span class="project-number">02</span></div>
+            <p data-pt="Projeto de biblioteca digital para organizar livros e informações por meio de uma interface web e estrutura de dados."
+               data-en="A digital library project for organizing books and information through a web interface and data structure.">
+              Projeto de biblioteca digital para organizar livros e informações por meio de uma interface web e estrutura de dados.
+            </p>
+            <div class="tag-list"><span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span></div>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/JohnMcArt/sitema-paginario" target="_blank" rel="noopener noreferrer"><span data-pt="Repositório" data-en="Repository">Repositório</span> ↗</a>
+              <a class="project-link" href="https://johnmcart.github.io/sitema-paginario/" target="_blank" rel="noopener noreferrer"><span data-pt="Ver demonstração" data-en="Live demo">Ver demonstração</span> ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="web education">
+          <a class="project-cover cover-a11y" href="https://github.com/JohnMcArt/Acessibilidade-Digital-e-Web-para-Todos" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório A11Y para Todos">
+            <span class="cover-index">PROJECT 03 / ACCESSIBILITY</span>
+            <div class="a11y-symbol" aria-hidden="true">a11y<span>+</span></div>
+            <span class="a11y-caption">A WEB FOR EVERYONE.</span>
+            <span class="cover-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-title-row"><h3>A11Y para Todos</h3><span class="project-number">03</span></div>
+            <p data-pt="Experiência educativa sobre acessibilidade digital, com conteúdo interativo, quiz, jogo e orientações relacionadas às diretrizes WCAG."
+               data-en="An educational experience about digital accessibility, with interactive content, a quiz, a game and guidance related to WCAG.">
+              Experiência educativa sobre acessibilidade digital, com conteúdo interativo, quiz, jogo e orientações relacionadas às diretrizes WCAG.
+            </p>
+            <div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>WCAG</span></div>
+            <a class="project-link" href="https://github.com/JohnMcArt/Acessibilidade-Digital-e-Web-para-Todos" target="_blank" rel="noopener noreferrer"><span data-pt="Ver repositório" data-en="View repository">Ver repositório</span> ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="education">
+          <a class="project-cover cover-eca" href="https://github.com/JohnMcArt/Guardioes-ECA" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório Guardiões do ECA">
+            <span class="cover-index">PROJECT 04 / EDUCATION</span>
+            <div class="eca-emblem" aria-hidden="true">
+              <svg viewBox="0 0 120 120" fill="none">
+                <path d="M60 9L98 25V54C98 80 82 99 60 111C38 99 22 80 22 54V25L60 9Z" stroke="currentColor" stroke-width="3"/>
+                <path d="M42 60L54 72L79 45" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="eca-title">GUARDIÕES<br>DO ECA</span>
+            <span class="cover-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-title-row"><h3>Guardiões do ECA</h3><span class="project-number">04</span></div>
+            <p data-pt="Jogo educativo criado no Scratch para abordar os direitos de crianças e adolescentes, incentivando reflexão, empatia e cidadania."
+               data-en="An educational Scratch game about children's and adolescents' rights, encouraging reflection, empathy and citizenship.">
+              Jogo educativo criado no Scratch para abordar os direitos de crianças e adolescentes, incentivando reflexão, empatia e cidadania.
+            </p>
+            <div class="tag-list"><span>Scratch</span><span>Educação</span><span>Cidadania</span></div>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/JohnMcArt/Guardioes-ECA" target="_blank" rel="noopener noreferrer"><span data-pt="Repositório" data-en="Repository">Repositório</span> ↗</a>
+              <a class="project-link" href="https://scratch.mit.edu/projects/1221262893/" target="_blank" rel="noopener noreferrer"><span data-pt="Jogar online" data-en="Play online">Jogar online</span> ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="web">
+          <div class="project-cover cover-planner">
+            <span class="cover-index">PROJECT 05 / PRODUCTIVITY</span>
+            <div class="planner-window">
+              <div class="planner-top"><span></span><span></span><span></span></div>
+              <span class="planner-heading">today<span>.</span></span>
+              <div class="planner-task"><i></i><span></span></div>
+              <div class="planner-task"><i></i><span></span></div>
+              <div class="planner-task"><i></i><span></span></div>
+              <div class="planner-progress"><span></span></div>
+            </div>
+            <span class="cover-open" aria-hidden="true">↗</span>
+          </div>
+          <div class="project-info">
+            <div class="project-title-row"><h3>Planejador diário</h3><span class="project-number">05</span></div>
+            <p data-pt="Projeto de planejamento e gestão do tempo, concebido para reunir tarefas, hábitos, metas, calendário e técnica Pomodoro."
+               data-en="A planning and time-management project designed to bring together tasks, habits, goals, a calendar and the Pomodoro technique.">
+              Projeto de planejamento e gestão do tempo, concebido para reunir tarefas, hábitos, metas, calendário e técnica Pomodoro.
+            </p>
+            <div class="tag-list"><span>Django</span><span>Python</span><span>Web</span></div>
+            <span class="project-link project-link-muted" data-pt="Link do repositório a adicionar" data-en="Repository link to be added">Link do repositório a adicionar</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="technology">
+          <div class="project-cover cover-esp">
+            <span class="cover-index">PROJECT 06 / IOT</span>
+            <div class="circuit-art" aria-hidden="true">
+              <svg viewBox="0 0 260 200" fill="none">
+                <path d="M20 35H80V70H120M240 35H180V70H140M20 165H80V130H120M240 165H180V130H140" stroke="#A4CDAE" stroke-width="2"/>
+                <rect x="95" y="55" width="70" height="90" rx="8" stroke="#C5E8CE" stroke-width="2"/>
+                <rect x="108" y="70" width="44" height="24" rx="3" stroke="#C5E8CE" stroke-width="2"/>
+                <path d="M108 108H152M108 118H143" stroke="#C5E8CE" stroke-width="2"/>
+                <circle cx="130" cy="130" r="4" fill="#C5E8CE"/>
+                <circle cx="20" cy="35" r="4" fill="#C5E8CE"/>
+                <circle cx="240" cy="35" r="4" fill="#C5E8CE"/>
+                <circle cx="20" cy="165" r="4" fill="#C5E8CE"/>
+                <circle cx="240" cy="165" r="4" fill="#C5E8CE"/>
+              </svg>
+            </div>
+            <span class="esp-caption">SMART IRRIGATION / ESP32</span>
+          </div>
+          <div class="project-info">
+            <div class="project-title-row"><h3>Monitoramento de solo</h3><span class="project-number">06</span></div>
+            <p data-pt="Experimento de automação com ESP32 para monitorar a umidade do solo e acionar um relé conforme um limite definido."
+               data-en="An ESP32 automation experiment that monitors soil moisture and activates a relay according to a defined threshold.">
+              Experimento de automação com ESP32 para monitorar a umidade do solo e acionar um relé conforme um limite definido.
+            </p>
+            <div class="tag-list"><span>ESP32</span><span>Sensores</span><span>Automação</span></div>
+            <span class="project-link project-link-muted" data-pt="Link do repositório a adicionar" data-en="Repository link to be added">Link do repositório a adicionar</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="section-bottom-link">
+        <a class="button button-secondary" href="https://github.com/JohnMcArt?tab=repositories" target="_blank" rel="noopener noreferrer">
+          <span data-pt="Explorar todos os repositórios" data-en="Explore all repositories">Explorar todos os repositórios</span> ↗
+        </a>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">02 — TECHNICAL TOOLKIT</p>
+          <h2 data-pt="Habilidades<span class='accent'>.</span>" data-en="Skills<span class='accent'>.</span>">Habilidades<span class="accent">.</span></h2>
+        </div>
+        <p data-pt="Tecnologias e práticas exploradas em estudos e projetos. Minha prioridade é aprender, aplicar e evoluir."
+           data-en="Technologies and practices explored through studies and projects. My priority is to learn, apply and improve.">
+          Tecnologias e práticas exploradas em estudos e projetos. Minha prioridade é aprender, aplicar e evoluir.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card skill-primary reveal">
+          <span class="skill-number">01 / PRIMARY FOCUS</span>
+          <div class="skill-icon">&lt;/&gt;</div>
+          <h3>Front-end</h3>
+          <p data-pt="Construção e estilização de interfaces para a web, com atenção à responsividade e à experiência de uso."
+             data-en="Building and styling web interfaces, with attention to responsiveness and user experience.">
+            Construção e estilização de interfaces para a web, com atenção à responsividade e à experiência de uso.
+          </p>
+          <div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>TypeScript — em estudo</span></div>
+        </article>
+
+        <article class="skill-card reveal">
+          <span class="skill-number">02 / APPLICATIONS</span>
+          <div class="skill-icon">{ }</div>
+          <h3>Back-end</h3>
+          <p data-pt="Lógica de aplicação, rotas, operações CRUD e desenvolvimento de sistemas com frameworks web."
+             data-en="Application logic, routes, CRUD operations and system development with web frameworks.">
+            Lógica de aplicação, rotas, operações CRUD e desenvolvimento de sistemas com frameworks web.
+          </p>
+          <div class="skill-tags"><span>Python</span><span>Django</span><span>PHP</span></div>
+        </article>
+
+        <article class="skill-card reveal">
+          <span class="skill-number">03 / DATA</span>
+          <div class="skill-icon">⌘</div>
+          <h3 data-pt="Banco de dados" data-en="Databases">Banco de dados</h3>
+          <p data-pt="Organização de dados, relacionamentos entre entidades e integração com aplicações."
+             data-en="Data organization, relationships between entities and application integration.">
+            Organização de dados, relacionamentos entre entidades e integração com aplicações.
+          </p>
+          <div class="skill-tags"><span>MySQL</span><span>SQLite</span><span>SQL</span></div>
+        </article>
+
+        <article class="skill-card reveal">
+          <span class="skill-number">04 / WORKFLOW</span>
+          <div class="skill-icon">↗</div>
+          <h3>Ferramentas</h3>
+          <p data-pt="Ferramentas utilizadas no desenvolvimento, versionamento e modelagem de projetos."
+             data-en="Tools used in development, version control and project modeling.">
+            Ferramentas utilizadas no desenvolvimento, versionamento e modelagem de projetos.
+          </p>
+          <div class="skill-tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Visual Studio</span><span>UML</span></div>
+        </article>
+
+        <article class="skill-card reveal">
+          <span class="skill-number">05 / INCLUSIVE WEB</span>
+          <div class="skill-icon">◎</div>
+          <h3 data-pt="Acessibilidade e usabilidade" data-en="Accessibility & usability">Acessibilidade e usabilidade</h3>
+          <p data-pt="Interesse na criação de experiências digitais mais claras, utilizáveis e inclusivas."
+             data-en="An interest in creating clearer, more usable and inclusive digital experiences.">
+            Interesse na criação de experiências digitais mais claras, utilizáveis e inclusivas.
+          </p>
+          <div class="skill-tags"><span>WCAG</span><span>Design responsivo</span><span>Usabilidade</span></div>
+        </article>
+
+        <article class="skill-card reveal">
+          <span class="skill-number">06 / CREATIVE TECH</span>
+          <div class="skill-icon">✳</div>
+          <h3 data-pt="Tecnologia criativa" data-en="Creative technology">Tecnologia criativa</h3>
+          <p data-pt="Exploração de ferramentas para experiências interativas, publicação web e projetos com hardware."
+             data-en="Exploring tools for interactive experiences, web publishing and hardware projects.">
+            Exploração de ferramentas para experiências interativas, publicação web e projetos com hardware.
+          </p>
+          <div class="skill-tags"><span>WordPress</span><span>Scratch</span><span>Roblox Studio</span><span>ESP32</span><span>Arduino</span></div>
+        </article>
+      </div>
+
+      <p class="skills-note" data-pt="Os níveis de familiaridade variam entre as tecnologias. As informações refletem estudos e experiências em projetos, não certificações profissionais."
+         data-en="Familiarity varies across technologies. These skills reflect studies and project experience, not professional certifications.">
+        Os níveis de familiaridade variam entre as tecnologias. As informações refletem estudos e experiências em projetos, não certificações profissionais.
+      </p>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="about-layout">
+        <div class="about-heading">
+          <p class="eyebrow">03 — THE PERSON BEHIND THE CODE</p>
+          <h2 data-pt="Curiosidade move.<br><span class='accent'>Prática constrói.</span>" data-en="Curiosity moves.<br><span class='accent'>Practice builds.</span>">
+            Curiosidade move.<br><span class="accent">Prática constrói.</span>
+          </h2>
+          <div class="about-decoration" aria-hidden="true">
+            <svg viewBox="0 0 220 150" fill="none">
+              <path d="M10 120C50 10 100 10 110 75S170 140 210 25" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="110" cy="75" r="9" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="110" cy="75" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p data-pt="Sou estudante do curso Técnico em Informática para Internet no IF Baiano — Campus Guanambi. Tenho interesse em desenvolvimento web, construção de sistemas e design de interfaces. Gosto de aprender colocando a mão na massa, investigando problemas e transformando ideias em projetos funcionais."
+             data-en="I'm an Internet Computing technical student at IF Baiano — Guanambi Campus. I'm interested in web development, system building and interface design. I enjoy learning by doing, investigating problems and turning ideas into functional projects.">
+            Sou estudante do curso Técnico em Informática para Internet no IF Baiano — Campus Guanambi. Tenho interesse em desenvolvimento web, construção de sistemas e design de interfaces. Gosto de aprender colocando a mão na massa, investigando problemas e transformando ideias em projetos funcionais.
+          </p>
+          <p data-pt="Também valorizo a comunicação, a organização, a criatividade e o trabalho em equipe. Busco uma oportunidade de estágio ou início de carreira para contribuir, aprender com profissionais da área e desenvolver experiência em projetos reais."
+             data-en="I also value communication, organization, creativity and teamwork. I'm looking for an internship or entry-level opportunity where I can contribute, learn from experienced professionals and develop skills through real projects.">
+            Também valorizo a comunicação, a organização, a criatividade e o trabalho em equipe. Busco uma oportunidade de estágio ou início de carreira para contribuir, aprender com profissionais da área e desenvolver experiência em projetos reais.
+          </p>
+
+          <div class="personal-interests">
+            <span class="interest-label" data-pt="ALÉM DO CÓDIGO" data-en="BEYOND CODE">ALÉM DO CÓDIGO</span>
+            <div class="interest-row">
+              <span class="interest-symbol">♫</span>
+              <div><strong data-pt="Música e piano" data-en="Music & piano">Música e piano</strong><p data-pt="Interesse por música, expressão artística e aprendizado musical." data-en="An interest in music, artistic expression and musical learning.">Interesse por música, expressão artística e aprendizado musical.</p></div>
+            </div>
+            <div class="interest-row">
+              <span class="interest-symbol">✳</span>
+              <div><strong data-pt="Olimpíadas do conhecimento" data-en="Academic olympiads">Olimpíadas do conhecimento</strong><p data-pt="Interesse por desafios intelectuais, especialmente em ciências e física." data-en="An interest in intellectual challenges, especially science and physics.">Interesse por desafios intelectuais, especialmente em ciências e física.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section education-section" id="education">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">04 — LEARNING JOURNEY</p>
+          <h2 data-pt="Formação<span class='accent'>.</span>" data-en="Education<span class='accent'>.</span>">Formação<span class="accent">.</span></h2>
+        </div>
+        <p data-pt="Minha trajetória de aprendizagem, construída entre a formação técnica e os projetos práticos."
+           data-en="My learning journey, built through technical education and hands-on projects.">
+          Minha trajetória de aprendizagem, construída entre a formação técnica e os projetos práticos.
+        </p>
+      </div>
+
+      <div class="education-list">
+        <article class="education-item">
+          <span class="education-date">2023 — 2026</span>
+          <div class="education-main">
+            <span class="education-type" data-pt="FORMAÇÃO TÉCNICA INTEGRADA" data-en="INTEGRATED TECHNICAL EDUCATION">FORMAÇÃO TÉCNICA INTEGRADA</span>
+            <h3 data-pt="Técnico em Informática para Internet" data-en="Technical Degree in Internet Computing">Técnico em Informática para Internet</h3>
+            <p>IF Baiano · Campus Guanambi</p>
+            <span class="education-status" data-pt="Conclusão prevista para dezembro de 2026" data-en="Expected completion: December 2026">Conclusão prevista para dezembro de 2026</span>
+          </div>
+          <span class="education-arrow" aria-hidden="true">↗</span>
+        </article>
+
+        <article class="education-item">
+          <span class="education-date" data-pt="FORMAÇÃO COMPLEMENTAR" data-en="ADDITIONAL TRAINING">FORMAÇÃO COMPLEMENTAR</span>
+          <div class="education-main">
+            <span class="education-type">SEBRAE</span>
+            <h3 data-pt="Curso de formação complementar" data-en="Additional training course">Curso de formação complementar</h3>
+            <p data-pt="Inclua aqui o nome exato do curso e a carga horária conforme o certificado."
+               data-en="Add the exact course title and duration as shown on your certificate.">
+              Inclua aqui o nome exato do curso e a carga horária conforme o certificado.
+            </p>
+          </div>
+          <span class="education-arrow" aria-hidden="true">↗</span>
+        </article>
+      </div>
+
+      <div class="credentials-note">
+        <span class="credentials-icon">✳</span>
+        <div>
+          <h3 data-pt="Certificados e conquistas" data-en="Certificates & achievements">Certificados e conquistas</h3>
+          <p data-pt="Certificados de cursos e olimpíadas do conhecimento podem ser adicionados aqui futuramente, em uma área secundária."
+             data-en="Course and academic olympiad certificates can be added here later, in a secondary section.">
+            Certificados de cursos e olimpíadas do conhecimento podem ser adicionados aqui futuramente, em uma área secundária.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <p class="eyebrow">05 — LET'S CONNECT</p>
+      <h2 data-pt="Vamos construir<br><span class='accent'>algo interessante.</span>" data-en="Let's build<br><span class='accent'>something meaningful.</span>">
+        Vamos construir<br><span class="accent">algo interessante.</span>
+      </h2>
+      <p class="contact-description" data-pt="Estou aberto a oportunidades de estágio, primeiro emprego e colaboração em projetos. Se quiser conversar sobre tecnologia, ideias ou trabalho, entre em contato."
+         data-en="I'm open to internship opportunities, entry-level roles and project collaborations. If you'd like to talk about technology, ideas or work, get in touch.">
+        Estou aberto a oportunidades de estágio, primeiro emprego e colaboração em projetos. Se quiser conversar sobre tecnologia, ideias ou trabalho, entre em contato.
+      </p>
+
+      <a class="button button-primary contact-email" href="mailto:bastosdasilvajoaopedro@gmail.com">
+        <span data-pt="Enviar um e-mail" data-en="Send an email">Enviar um e-mail</span> ↗
+      </a>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="https://github.com/JohnMcArt" target="_blank" rel="noopener noreferrer">
+          <span class="contact-card-icon">GH</span>
+          <span><strong>GitHub</strong><small>JohnMcArt</small></span>
+          <span class="contact-arrow">↗</span>
+        </a>
+
+        <a class="contact-card" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" data-placeholder-link="linkedin">
+          <span class="contact-card-icon">in</span>
+          <span><strong>LinkedIn</strong><small data-pt="Adicionar perfil" data-en="Add profile">Adicionar perfil</small></span>
+          <span class="contact-arrow">↗</span>
+        </a>
+
+        
+<a class="contact-card"
+   href="https://wa.me/5577999611947?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20criar%20um%20projeto%20com%20voc%C3%AA%21"
+   target="_blank"
+   rel="noopener noreferrer">
+  <span class="contact-card-icon">WA</span>
+  <span>
+    <strong>WhatsApp</strong>
+    <small data-pt="Clique aqui!" data-en="Contact me!">Clique aqui!</small>
+  </span>
+  <span class="contact-arrow">↗</span>
+</a>
+
+
+        
+<a class="contact-card"
+   href="mailto:bastosdasilvajoaopedro@gmail.com">
+  <span class="contact-card-icon">@</span>
+  <span>
+    <strong>E-mail</strong>
+    <small>bastosdasilvajoaopedro@gmail.com</small>
+  </span>
+  <span class="contact-arrow">↗</span>
+</a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="#home">JM<span>.</span></a>
+    <span>© 2026 JohnMcArt</span>
+    <span data-pt="Feito com intenção." data-en="Made with intention.">Feito com intenção.</span>
+    <a href="#home" data-pt="Voltar ao topo ↑" data-en="Back to top ↑">Voltar ao topo ↑</a>
+  </footer>
+</body>
+</html>
