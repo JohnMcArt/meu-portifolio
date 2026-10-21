@@ -1,69 +1,14 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  const languageButton = document.querySelector("#language-toggle");
   const menuButton = document.querySelector("#menu-toggle");
   const navigation = document.querySelector("#navigation");
   const filterButtons = document.querySelectorAll(".filter-button");
   const projectCards = document.querySelectorAll(".project-card");
   const revealElements = document.querySelectorAll(".reveal");
+  const currentLanguage = "pt";
 
-  // IDIOMA
-  let currentLanguage = "pt";
-
-  function setLanguage(language) {
-    currentLanguage = language;
-    document.documentElement.lang = language === "pt" ? "pt-BR" : "en";
-
-    document.querySelectorAll("[data-pt][data-en]").forEach((element) => {
-      const translation = element.dataset[language];
-
-      if (translation !== undefined) {
-        // Permite HTML apenas nos elementos de apresentação
-        // cujo conteúdo HTML foi definido no próprio index.html.
-        if (element.matches("h2")) {
-          element.innerHTML = translation;
-        } else {
-          element.textContent = translation;
-        }
-      }
-    });
-
-    if (languageButton) {
-      languageButton.textContent = language === "pt" ? "EN" : "PT";
-      languageButton.setAttribute(
-        "aria-label",
-        language === "pt" ? "Switch to English" : "Mudar para português"
-      );
-    }
-
-    document.title =
-      language === "pt"
-        ? "JohnMcArt — Portfólio"
-        : "JohnMcArt — Portfolio";
-
-    try {
-      // Persiste a escolha durante a navegação na mesma sessão.
-      sessionStorage.setItem("portfolio-language", language);
-    } catch {
-      // O site continua funcionando se o armazenamento estiver indisponível.
-    }
-  }
-
-  if (languageButton) {
-    languageButton.addEventListener("click", () => {
-      setLanguage(currentLanguage === "pt" ? "en" : "pt");
-    });
-  }
-
-  try {
-    const savedLanguage = sessionStorage.getItem("portfolio-language");
-
-    if (savedLanguage === "en" || savedLanguage === "pt") {
-      setLanguage(savedLanguage);
-    }
-  } catch {
-    // O idioma padrão continua sendo português.
-  }
+  document.documentElement.lang = "pt-BR";
+  document.title = "JohnMcArt — Portfólio";
 
   // MENU PARA DISPOSITIVOS MÓVEIS
   function closeMenu() {
@@ -72,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menuButton.setAttribute("aria-expanded", "false");
     menuButton.setAttribute(
       "aria-label",
-      currentLanguage === "pt" ? "Abrir menu" : "Open menu"
+      "Abrir menu"
     );
     navigation.classList.remove("is-open");
   }
@@ -86,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
       menuButton.setAttribute(
         "aria-label",
         isOpen
-          ? (currentLanguage === "pt" ? "Abrir menu" : "Open menu")
-          : (currentLanguage === "pt" ? "Fechar menu" : "Close menu")
+          ? ("Abrir menu")
+          : ("Fechar menu")
       );
 
       navigation.classList.toggle("is-open", !isOpen);
@@ -112,6 +57,51 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!clickedInsideMenu) {
         closeMenu();
       }
+    });
+  }
+
+  // GALERIA VISUAL: arraste com mouse ou deslize no toque; setas do teclado também funcionam.
+  const artTrack = document.querySelector("#art-track");
+  if (artTrack) {
+    let isDown = false;
+    let startX = 0;
+    let startScrollLeft = 0;
+    let didDrag = false;
+
+    artTrack.addEventListener("pointerdown", (event) => {
+      if (event.pointerType === "touch") return;
+      isDown = true;
+      didDrag = false;
+      startX = event.clientX;
+      startScrollLeft = artTrack.scrollLeft;
+      artTrack.classList.add("is-dragging");
+      artTrack.setPointerCapture(event.pointerId);
+    });
+
+    artTrack.addEventListener("pointermove", (event) => {
+      if (!isDown) return;
+      const distance = event.clientX - startX;
+      if (Math.abs(distance) > 4) didDrag = true;
+      artTrack.scrollLeft = startScrollLeft - distance;
+    });
+
+    const stopDragging = () => {
+      isDown = false;
+      artTrack.classList.remove("is-dragging");
+    };
+    artTrack.addEventListener("pointerup", stopDragging);
+    artTrack.addEventListener("pointercancel", stopDragging);
+    artTrack.addEventListener("lostpointercapture", stopDragging);
+    artTrack.addEventListener("click", (event) => {
+      if (didDrag) {
+        event.preventDefault();
+        event.stopPropagation();
+        didDrag = false;
+      }
+    }, true);
+    artTrack.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight") artTrack.scrollBy({ left: 260, behavior: "smooth" });
+      if (event.key === "ArrowLeft") artTrack.scrollBy({ left: -260, behavior: "smooth" });
     });
   }
 
@@ -223,5 +213,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
       link.href = configuredUrl;
     });
+  });
+});
+
+
+// Pré-visualização local das mídias nos espaços da galeria.
+document.querySelectorAll('[data-art-slot]').forEach((input) => {
+  input.addEventListener('change', () => {
+    const file = input.files && input.files[0];
+    if (!file) return;
+    const slot = input.closest('.art-upload-slot');
+    const preview = slot && slot.querySelector('.art-preview');
+    if (!slot || !preview) return;
+    const url = URL.createObjectURL(file);
+    preview.replaceChildren();
+    let media;
+    if (file.type.startsWith('video/')) {
+      media = document.createElement('video'); media.src = url; media.controls = true; media.muted = true; media.playsInline = true;
+    } else {
+      media = document.createElement('img'); media.src = url; media.alt = 'Pré-visualização da arte ' + input.dataset.artSlot;
+    }
+    preview.appendChild(media); slot.classList.add('has-media');
   });
 });
