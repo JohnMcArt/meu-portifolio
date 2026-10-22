@@ -3846,3 +3846,125 @@ footer { border-top-color:var(--line); }
 @media(max-width:1050px) { .galeria-mosaico { grid-template-columns:repeat(8,minmax(0,1fr)); gap:10px; } .arte-card { grid-column:span 2; } .arte-card--wide { grid-column:span 4; } .arte-card--tall { grid-column:span 2; } .arte-card--wide.arte-card--tall { grid-column:span 4; } }
 @media(max-width:650px) { .gallery-heading { display:block; } .gallery-heading>p { margin-top:16px; } .galeria-mosaico { grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; } .arte-card { grid-column:span 2; aspect-ratio:3 / 4; } .arte-card--wide { grid-column:span 4; aspect-ratio:1.5 / 1; } .arte-card--tall { grid-column:span 2; aspect-ratio:3 / 4; } .arte-card--wide.arte-card--tall { grid-column:span 4; aspect-ratio:1 / 1; } .arte-caption { padding:28px 8px 8px; } .arte-caption strong { font-size:10px; } .media-kind { top:6px; left:6px; font-size:7px; padding:4px 5px; } .gallery-instructions { font-size:.58rem; letter-spacing:.08em; } }
 @media(prefers-reduced-motion:reduce) { .arte-media img,.arte-media video,.arte-caption { transition:none; } }
+
+/* GALERIA ACESSÍVEL — grade regular, imagens completas e legendas sempre visíveis */
+.gallery-section .galeria-mosaico {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-flow: row;
+  grid-auto-rows: auto;
+  align-items: stretch;
+  gap: clamp(12px, 1.5vw, 22px);
+  margin-top: 22px;
+}
+.gallery-section .arte-card,
+.gallery-section .arte-card--wide,
+.gallery-section .arte-card--tall,
+.gallery-section .arte-card--wide.arte-card--tall {
+  grid-column: auto;
+  grid-row: auto;
+  aspect-ratio: auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #101010;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.gallery-section .arte-card:hover,
+.gallery-section .arte-card:focus-within {
+  border-color: rgba(0,232,232,.65);
+  transform: translateY(-2px);
+}
+.gallery-section .arte-media {
+  position: relative;
+  inset: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: clamp(190px, 23vw, 300px);
+  flex: 0 0 auto;
+  overflow: hidden;
+  background: #080808;
+  text-decoration: none;
+}
+.gallery-section .arte-media img,
+.gallery-section .arte-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: #080808;
+  transform: none;
+  filter: none;
+}
+.gallery-section .arte-card:hover .arte-media img,
+.gallery-section .arte-card:focus-within .arte-media img {
+  transform: none;
+  filter: none;
+}
+.gallery-section .media-kind {
+  top: 8px;
+  left: 8px;
+  padding: 5px 7px;
+  font-size: 9px;
+  background: rgba(0,0,0,.8);
+}
+.gallery-section .arte-caption,
+.gallery-section .arte-card:hover .arte-caption,
+.gallery-section .arte-card:focus-within .arte-caption {
+  position: static;
+  inset: auto;
+  display: flex;
+  gap: 5px;
+  min-height: 62px;
+  padding: 12px 13px;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  background: #101010;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.gallery-section .arte-caption span {
+  font-size: 9px;
+  line-height: 1.4;
+  letter-spacing: .1em;
+  color: var(--electric-cyan, #00e8e8);
+}
+.gallery-section .arte-caption strong {
+  display: block;
+  overflow: visible;
+  font-size: 12px;
+  line-height: 1.45;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  color: #f5f5f5;
+}
+.gallery-section .arte-media:focus-visible {
+  outline: 2px solid var(--electric-cyan, #00e8e8);
+  outline-offset: -3px;
+}
+@media (max-width: 1000px) {
+  .gallery-section .galeria-mosaico { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .gallery-section .arte-media { height: clamp(190px, 29vw, 270px); }
+}
+@media (max-width: 650px) {
+  .gallery-section .galeria-mosaico { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .gallery-section .arte-media { height: clamp(160px, 48vw, 235px); }
+  .gallery-section .arte-caption { padding: 10px; min-height: 60px; }
+  .gallery-section .arte-caption span { font-size: 8px; }
+  .gallery-section .arte-caption strong { font-size: 11px; }
+  .gallery-section .gallery-instructions { flex-wrap: wrap; }
+}
+@media (max-width: 360px) {
+  .gallery-section .galeria-mosaico { grid-template-columns: 1fr; }
+  .gallery-section .arte-media { height: 260px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-section .arte-card { transition: none; }
+}
